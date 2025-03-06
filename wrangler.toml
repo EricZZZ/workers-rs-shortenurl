@@ -1,6 +1,19 @@
 name = "workers-rs-shortenurl"
 main = "build/worker/shim.mjs"
 compatibility_date = "2025-03-04"
+workers_dev = true
+
+[vars]
+WORKERS_RS_VERSION = "0.5.0"
+LIMIT = "15"
+
+[[kv_namespaces]]
+binding = "shortenurl"
+id = "<BINDING_ID>"
+preview_id = "<PREVIEW_ID>" #用于本地 remote cloudflare 上测试
+
+[observability.logs]
+enabled = true
 
 [build]
 command = "cargo install -q worker-build && worker-build --release"

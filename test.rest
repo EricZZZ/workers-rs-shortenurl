@@ -1,0 +1,32 @@
+### 获取id
+
+get http://localhost:8787/shorten/2EHg4q
+
+
+### 获取shorten url
+post http://localhost:8787/shorten
+Content-Type: application/json
+
+{
+    "url":"https://medium.com/@r.das699/an-example-of-connecting-to-a-sqlite-database-using-rust-cdeb363a277a"
+}
+
+###
+get http://localhost:8787/
+
+
+### 正式服
+GET https://workers-rs-shortenurl.biggogten.workers.dev/1
+
+### 获取id
+
+https://workers-rs-shortenurl.biggogten.workers.dev/shorten/9ZPxCc
+
+
+### 获取shorten url
+post https://workers-rs-shortenurl.biggogten.workers.dev/shorten
+Content-Type: application/json
+
+{
+    "url":"https://medium.com/@r.das699/an-example-of-connecting-to-a-sqlite-database-using-rust-cdeb363a277a"
+}
